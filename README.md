@@ -1,9 +1,6 @@
 <div align="center">
 	<h1>Strapi Blocks Vue Component</h1>
-  <p>
-  Based on the <a href="https://github.com/rdunk/sanity-blocks-vue-component/" _target="blank">https://github.com/rdunk/sanity-blocks-vue-component/</a>
-	</p>
-	<p>
+ 	<p>
 		<h3>A Vue component for rendering Rich Block JSON content from Stripe 4.</h3>
 	<br>
 	<br>
@@ -23,11 +20,11 @@ Import directly into your component or view:
 
 ```vue
 <template>
-  <RenderBlocks :blocks="blocks"  />
+  <RenderBlocks :content="blocks"  />
 </template>
 
 <script setup lang="ts">
-import { RenderBlocks, type BlocksContentType } from '@bgrusnak/blocks-vue-renderer';
+import RenderBlocks  from '@bgrusnak/blocks-vue-renderer';
 const blocks: BlocksContentType = [ {
     type: 'paragraph',
     children: [{ type: 'text', text: 'A simple paragraph' }],
@@ -53,7 +50,7 @@ The following props can be passed to the component.
 
 | Prop          | Required | Description                                        | Type   |
 | ------------- | -------- | -------------------------------------------------- | ------ |
-| `blocks`      | Yes      | Block content retrieved from Stripe.               | Array  | 
+| `content`      | Yes      | Block content retrieved from Stripe.               | Array  | 
 
 ## License
 
